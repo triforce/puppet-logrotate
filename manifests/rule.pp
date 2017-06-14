@@ -99,6 +99,7 @@
 #                   su => true (optional).
 # uncompresscmd   - The String command to be used to uncompress log files
 #                   (optional).
+# custom_cfg      - Array of custom lines to be appended to the rules
 #
 # Examples
 #
@@ -161,7 +162,8 @@ define logrotate::rule(
                         $su              = 'UNDEFINED',
                         $su_owner        = 'UNDEFINED',
                         $su_group        = 'UNDEFINED',
-                        $uncompresscmd   = 'UNDEFINED'
+                        $uncompresscmd   = 'UNDEFINED',
+                        $custom_cfg      = []
                         ) {
 
   #############################################################################
